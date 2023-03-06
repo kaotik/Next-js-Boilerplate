@@ -8,6 +8,8 @@
 
 Clone this project and use it to create your own [Next.js](https://nextjs.org) project. You can check a [Next js templates demo](https://creativedesignsguru.com/demo/Nextjs-Boilerplate/).
 
+MG: SWC issues - install with VPN off, then 'npm run dev'. it shoudl attempt to download the binary successfully.
+
 ### Features
 
 Developer experience first:
