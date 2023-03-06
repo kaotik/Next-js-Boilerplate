@@ -1,3 +1,23 @@
+# [3.8.0](https://github.com/ixartz/Next-js-Boilerplate/compare/v3.7.0...v3.8.0) (2023-03-02)
+
+
+### Features
+
+* fix heading levels increase by one ([e712e60](https://github.com/ixartz/Next-js-Boilerplate/commit/e712e60402f04033673d93e464d7b3c46fff7dbe))
+
+# [3.7.0](https://github.com/ixartz/Next-js-Boilerplate/compare/v3.6.0...v3.7.0) (2023-02-05)
+
+
+### Features
+
+* improve accessibility ([aa0f0b1](https://github.com/ixartz/Next-js-Boilerplate/commit/aa0f0b12085e31f13574fc9f4349157102d4467b))
+
+
+### Reverts
+
+* add support for all Node.js 14+, too restrictive with only Node.js 18+ ([4e27540](https://github.com/ixartz/Next-js-Boilerplate/commit/4e27540f638d4767fb60b612519669ad6bf69367))
+* downgrade semantic-release version to 19 ([26d5a6e](https://github.com/ixartz/Next-js-Boilerplate/commit/26d5a6ebe2fc4fe59fef40779e132ccf1f31c09f))
+
 # [3.6.0](https://github.com/ixartz/Next-js-Boilerplate/compare/v3.5.4...v3.6.0) (2022-12-03)
 
 
