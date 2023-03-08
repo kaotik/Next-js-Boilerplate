@@ -6,4 +6,5 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
   <Component {...pageProps} />
 );
 
+// @ts-ignore
 export default MyApp;
