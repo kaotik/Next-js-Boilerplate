@@ -11,9 +11,12 @@ module.exports = {
     locales: ['en_us', 'en_ca', 'fr_ca'],
   },
   /** To avoid issues when deploying to some paas (vercel...) */
-  // eslint-disable-next-line global-require
-  localePath: typeof window === 'undefined' ? require('path').resolve('./public/locales') : '/locales',
-
+  /* eslint-disable global-require */
+  localePath:
+    typeof window === 'undefined'
+      ? require('path').resolve('./public/locales')
+      : '/locales',
+  /* eslint-enable global-require */
   reloadOnPrerender: process.env.NODE_ENV === 'development',
 
   /**
@@ -23,4 +26,4 @@ module.exports = {
   // strictMode: true,
   // serializeConfig: false,
   // react: { useSuspense: false }
-}
+};
