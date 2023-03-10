@@ -10,12 +10,6 @@ module.exports = {
     defaultLocale: 'en_us',
     locales: ['en_us', 'en_ca', 'fr_ca'],
   },
-  /** To avoid issues when deploying to some paas (vercel...) */
-  /* eslint-disable global-require */
-  localePath:
-    typeof window === 'undefined'
-      ? require('path').resolve('./public/locales')
-      : '/locales',
   /* eslint-enable global-require */
   reloadOnPrerender: process.env.NODE_ENV === 'development',
 
