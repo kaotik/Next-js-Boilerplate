@@ -1,20 +1,18 @@
-import Link from '../../components/Link'
+// @ts-nocheck
+import { useTranslation } from 'next-i18next';
 
-import { useTranslation } from 'next-i18next'
 import { getStaticPaths, makeStaticProps } from '../../../lib/getStatic';
-
+import Link from '../../components/Link';
 
 const Home = () => {
-  const { t } = useTranslation(['common'])
+  // @ts-ignore
+  const { t } = useTranslation(['common']);
+  // @ts-ignore
   return (
     <div>
       <p>{t('h3')}</p>
-      <Link href='/'>
-        <button
-            type='button'
-        >
-          {t('common:back-to-home')}
-        </button>
+      <Link href="/">
+        <button type="button">{t('common:back-to-index')}</button>
       </Link>
     </div>
   );
@@ -22,5 +20,5 @@ const Home = () => {
 
 export default Home;
 
-const getStaticProps = makeStaticProps(['common'])
-export { getStaticPaths, getStaticProps }
+const getStaticProps = makeStaticProps(['common']);
+export { getStaticPaths, getStaticProps };
