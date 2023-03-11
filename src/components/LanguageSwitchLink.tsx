@@ -26,12 +26,7 @@ const LanguageSwitchLink = ({ locale, ...rest }) => {
   // @ts-ignore
   return (
     <Link href={href}>
-      <button
-        style={{ fontSize: 'small' }}
-        onClick={() => languageDetector.cache(locale)}
-      >
-        {locale}
-      </button>
+      <button onClick={() => languageDetector.cache(locale)}>{locale}</button>
     </Link>
   );
 };

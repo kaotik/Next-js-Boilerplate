@@ -9,27 +9,27 @@ import Link from '../../components/Link';
 
 const Index = () => {
   // @ts-ignore
-  const { t } = useTranslation(['common']);
+  const { t } = useTranslation(['common', 'index']);
 
   // @ts-ignore
   return (
     <Main
       meta={
         <Meta
-          title="Next.js Boilerplate Presentation"
-          description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
+          title=""
+          description=""
         />
       }
     >
+      <h3>{t('index:title')}</h3>
       <Link href="/home">
-        <button type="button">{t('to-second-page')}</button>
+        <button type="button">{t('common:to-home')}</button>
       </Link>
-      <h3>index page {t('h1')}</h3>
     </Main>
   );
 };
 
 export default Index;
 
-const getStaticProps = makeStaticProps(['common']);
+const getStaticProps = makeStaticProps(['common', 'index']);
 export { getStaticPaths, getStaticProps };
