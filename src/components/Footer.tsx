@@ -1,20 +1,28 @@
-import { Trans, useTranslation } from 'next-i18next';
-import pkg from 'next-i18next/package.json';
-import type { FC } from 'react';
+import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
+import LanguageSwitchLink from './LanguageSwitchLink'
 
-export const Footer: FC = () => {
-  // @ts-ignore
-  const { t } = useTranslation('footer');
+import i18nextConfig from '../../next-i18next.config';
 
-  return (
-    <footer>
-      <p>{t('description')}</p>
-      <p>next-i18next v{pkg.version}</p>
-      <p>
-        <Trans i18nKey="helpLocize" t={t}>
-          test
-        </Trans>
-      </p>
-    </footer>
-  );
-};
+export const Footer = () => {
+    const router = useRouter()
+    const { t } = useTranslation(['footer'])
+    const currentLocale = router.query.locale || i18nextConfig.i18n.defaultLocale;
+
+    return (
+        <footer>
+            <p>
+                <span>{t('footer:change-language')}</span>
+                {i18nextConfig.i18n.locales.map((locale) => {
+                    if (locale === currentLocale) return null;
+                    return (
+                        <LanguageSwitchLink
+                            locale={locale}
+                            key={locale}
+                        />
+                    );
+                })}
+            </p>
+        </footer>
+    )
+}

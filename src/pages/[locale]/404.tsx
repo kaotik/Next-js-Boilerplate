@@ -6,10 +6,11 @@ import { Main } from '@/templates/Main';
 
 import { getStaticPaths, makeStaticProps } from '../../../lib/getStatic';
 import Link from '../../components/Link';
+import {Footer} from "../../components/Footer";
 
 const Index = () => {
   // @ts-ignore
-  const { t } = useTranslation(['common']);
+  const { t } = useTranslation(['common', 'footer']);
 
   // @ts-ignore
   return (
@@ -25,11 +26,12 @@ const Index = () => {
       <Link href="/">
         <button type="button">{t('common:go-to-index')}</button>
       </Link>
+        <Footer />
     </Main>
   );
 };
 
 export default Index;
 
-const getStaticProps = makeStaticProps(['common']);
+const getStaticProps = makeStaticProps(['common', 'footer']);
 export { getStaticPaths, getStaticProps };

@@ -5,10 +5,11 @@ import { getStaticPaths, makeStaticProps } from '../../../lib/getStatic';
 import Link from '../../components/Link';
 import {Main} from "@/templates/Main";
 import {Meta} from "@/layouts/Meta";
+import {Footer} from "../../components/Footer";
 
 const Home = () => {
   // @ts-ignore
-  const { t } = useTranslation(['common']);
+  const { t } = useTranslation(['common', 'footer']);
   // @ts-ignore
   return (
       <Main
@@ -23,11 +24,12 @@ const Home = () => {
           <Link href="/">
               <button type="button">{t('common:go-to-index')}</button>
           </Link>
+          <Footer />
       </Main>
   );
 };
 
 export default Home;
 
-const getStaticProps = makeStaticProps(['common']);
+const getStaticProps = makeStaticProps(['common', 'footer']);
 export { getStaticPaths, getStaticProps };
