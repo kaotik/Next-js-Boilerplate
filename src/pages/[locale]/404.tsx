@@ -21,9 +21,9 @@ const Index = () => {
         />
       }
     >
-      <h3>{t('common:index-title')}</h3>
-      <Link href="/home">
-        <button type="button">{t('common:go-to-home')}</button>
+      <h3>{t('common:title-404')}</h3>
+      <Link href="/">
+        <button type="button">{t('common:go-to-index')}</button>
       </Link>
     </Main>
   );

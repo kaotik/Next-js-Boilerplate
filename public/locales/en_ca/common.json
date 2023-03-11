@@ -1,3 +1,8 @@
 {
-  "h1": "A simple example"
+  "home-title": "Home EN CA",
+  "index-title": "Index EN CA",
+  "title-404": "404",
+  "go-to-home": "Go to Home page",
+  "go-to-index": "Go to Index page",
+  "change-language": "Change language to"
 }

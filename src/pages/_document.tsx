@@ -21,7 +21,7 @@ class MyDocument extends Document<Props> {
       <Html lang={currentLocale}>
         <Head />
         <body>
-          {AppConfig.locale}
+          <div>locale from app config: {AppConfig.locale}</div>
           <Main />
           <NextScript />
         </body>
